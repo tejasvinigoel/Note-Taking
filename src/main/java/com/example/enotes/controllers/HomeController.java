@@ -23,7 +23,7 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/signin")
     public String login(){
         return "login";
     }
@@ -49,18 +49,4 @@ public class HomeController {
         return "register";
     }
 
-    @GetMapping("/addnotes")
-    public String addnotes(){
-        return "add_notes";
-    }
-
-    @GetMapping("/viewnotes")
-    public String viewnotes(){
-        return "view_notes";
-    }
-
-    @GetMapping("/editnotes")
-    public String editnotes(){
-        return "edit_notes";
-    }
 }

@@ -28,10 +28,16 @@
 
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <th:block th:if="${user==null}">
                 <li><a href="register" class="btn btn-sm btn-primary"><i class="fa-regular fa-user"></i> Register </a></li>
-                <li><a href="login" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>
-              </ul>
-  
+                <li><a href="signin" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>
+              </th:block>
+
+              <th:block th:if="${user!=null}">
+                <li><a href="#" class="btn btn-sm btn-primary"><i class="fa-regular fa-user"></i> [[${user.name}]] </a></li>
+                <li><a href="/logout" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i> Logout</a></li>
+              </th:block>
+            </ul>
 
             
           </div>
