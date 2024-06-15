@@ -41,7 +41,7 @@ public class HomeController {
             session.setAttribute("msg", "Something went wrong");
         }
         }
-        return "redirect:/register"; //not using--> url will still show /submit, now it goes back to /register
+        return "redirect:/user/register"; //not using--> url will still show /submit, now it goes back to /register
     }
 
     @GetMapping("/register")
